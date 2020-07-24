@@ -1,0 +1,16 @@
+<div class="wrapper" *ngIf="(invoicesCounts$ | async) as invoicesCount">
+  <div>
+    <span><strong>Celkový počet: </strong></span>
+    <span>{{ invoicesCount.all }}</span>
+  </div>
+
+  <div>
+    <span><strong>Uhradených: </strong></span>
+    <span>{{ invoicesCount.paid }}</span>
+  </div>
+
+  <div>
+    <span><strong>Neuhradených: </strong></span>
+    <span>{{ invoicesCount.notPaid }}</span>
+  </div>
+</div>

@@ -6,6 +6,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
+  { path: 'invoices',
+    loadChildren: () =>
+      import('./invoices/invoices.module').then(m => m.InvoicesModule)
+  },
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

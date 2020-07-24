@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule
   ],
   providers: [],

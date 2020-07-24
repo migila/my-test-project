@@ -1,0 +1,57 @@
+$margin-top: 60px;
+$list-width: 320px;
+$list-header-height: 76px;
+$list-footer-height: 100px;
+
+.shell-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-top: $margin-top;
+  width: 100%;
+  height: calc(100% - #{$margin-top});
+}
+
+
+.list, .detail {
+  // box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+}
+
+.list {
+  width: $list-width;
+  border-right: 1px solid grey;
+
+  .list-header {
+    position: absolute ;
+    top: 0;
+    left: 0;
+    height: $list-header-height;
+    width: 100%;
+  }
+
+  .list-body {
+    position: absolute ;
+    top: $list-header-height;
+    left: 0;
+    height: calc(100% - #{$list-header-height} - #{$list-footer-height});
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .list-footer {
+    position: absolute ;
+    bottom: 0;
+    left: 0;
+    height: $list-footer-height;
+    width: 100%;
+  }
+}
+
+.detail {
+  width: calc(100% - #{$list-width});
+  margin-left: $list-width;
+}

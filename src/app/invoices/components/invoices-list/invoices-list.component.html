@@ -1,0 +1,9 @@
+<ng-container *ngIf="(invoices$ | async) as invoices">
+  <ul class="list-group">
+    <li *ngFor="let invoice of invoices"
+      class="list-group-item d-flex justify-content-between align-items-center">
+      {{invoice.id}}. {{ invoice.name }}
+      <app-invoice-status [invoice]=invoice ></app-invoice-status>
+    </li>
+  </ul>
+</ng-container>

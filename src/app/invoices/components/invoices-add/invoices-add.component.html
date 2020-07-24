@@ -1,0 +1,6 @@
+<div class="wrapper">
+  <form [formGroup]="newInvoiceForm">
+    <input type="text" class="form-control" placeholder="Zadajte názov" formControlName="name"/>
+    <button type="submit" class="btn btn-primary" [disabled]="!newInvoiceForm.valid" (click)="addInvoice()">Pridať faktúru</button>
+  </form>
+</div>
